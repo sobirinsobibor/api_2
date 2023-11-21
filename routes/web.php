@@ -22,7 +22,7 @@ Route::resource('book-category', BookCategoryController::class);
 Route::resource('editor', EditorController::class);
 Route::resource('role', RoleController::class);
 Route::resource('user', UserController::class);
-Route::apiResource('book', BookController::class)->except([
+Route::resource('book', BookController::class)->except([
     'update', 'store'
 ]);
 Route::get('book/category/{category}', [BookController::class, 'getByCategory']);
